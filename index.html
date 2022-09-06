@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+	<html lang="en" role="">
+		<head>
+			  <meta charset="UTF-8">
+			  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+				<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+				<link rel="preconnect" href="https://fonts.googleapis.com">
+				<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+				<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+			  <title>Frontend Mentor | NFT preview card component</title>
+			  <style>
+					 	 *{
+								margin: 0;
+								padding: 0;
+								box-sizing: border-box;
+							}
+					body{
+								background-color: hsl(217, 54%, 11%);
+								display: flex;
+								align-items: center;
+							 justify-content: center;
+							 height: 100vh;
+							 margin: 0 auto;
+					     font-family: Outfit;
+					     font-size: 18px;
+						}
+					.card{
+							background-color: hsl(216, 50%, 16%);
+							width: 18.7%;
+							height: 580px;
+							border-radius: 20px;
+						}
+					.cardmainphoto{
+										margin-top: 5%;
+										margin-left: 5%;
+										border-radius: 15px;
+										transition: all 0.5s;
+						}
+					.cardmainphoto:hover{
+									color: hsl(178, 100%, 50%);
+									cursor: pointer;
+									transform: scale(1.05);
+									background-color: hsl(178, 100%, 50%, 0.7);
+							}
+					.card-top {
+									height: 65%;
+									margin-top: 5%;
+							    position: relative;
+							}
+					.card-top img {
+							    width: 90%;
+							    height: 80%;
+									margin-left: 5%;
+							    border-radius: 10px;
+							}
+						.card-top .overlay{
+												margin-left: 5%;
+										    position: absolute;
+										    top: 0;
+										    bottom: 0;
+										    left: 0;
+										    right: 0;
+										    width: 90%;
+										    height: 80%;
+										    background-color: hsla(178, 100%, 50%, 0);
+										    border-radius: 10px;
+										    transition: 1s all;
+							}
+							.card-top .overlay:hover {
+										    cursor: pointer;
+										    background-color: hsl(178, 100%, 50%, 0.7);
+							}
+							.icon {
+									    display: none;
+							}
+							.card-top .overlay .icon {
+									    font-size: 1rem;
+									    width: 20%;
+									    height: 20%;
+									    transform: translate(-50%, -50%);
+							}
+							.card-top .overlay:hover .icon {
+									    position: absolute;
+									    top: 50%;
+									    left: 50%;
+									    display: block;
+									    text-align: center;
+									    transition: 1.5s ease-in;
+							}
+					.equi{
+							font-size: 1.4rem;
+							color: hsl(0, 0%, 100%);
+							font-weight: 600;
+							padding-left: 22px;
+							margin-top: -13%;
+							transition: all 0.5s;
+						}
+					.equi:hover{
+												color: hsl(178, 100%, 50%);
+												cursor: pointer;
+												transform: scale(1.05,1.05);
+					}
+					.paragraph{
+							font-size: 19.6px;
+							color: hsl(215, 51%, 70%);
+							font-family: 'Outfit', sans-serif;
+							font-weight: 300;
+							padding-left: 22px;
+							padding-right: 15px;
+							line-height: 26px;
+							margin-top: 5%;
+						}
+					.ethe{
+							width: 4.3%;
+							margin-top: 6%;
+							margin-left: 28px;
+						}
+					.et{
+							color: hsl(178, 100%, 50%);
+							font-family: 'Outfit', sans-serif;
+							font-weight: 500;
+							font-size: 20px;
+							margin-left: 50px;
+							margin-top: -9%;
+						}
+					.clockday{
+											margin-top: -5%;
+					}
+					.clock{
+								width: 7.3%;
+								margin-left: 60%;
+								margin-top: -40%;
+						}
+					.day{
+							color: hsl(215, 51%, 70%);
+							font-family: 'Outfit', sans-serif;
+							font-weight: 300;
+							font-size: 18.5px;
+							margin-left: 69%;
+							margin-top: -8.5%;
+						}
+					.line{
+									height: 1px;
+									width: 90%;
+									margin-left: 6%;
+									background: hsl(215, 32%, 27%);
+									margin-top: 5%;
+									margin-bottom: 20px;
+					}
+					.crea{
+							color: hsl(215, 51%, 70%);
+							font-family: 'Outfit', sans-serif;
+							font-weight: 300;
+							font-size: 16px;
+							margin-top: -10%;
+							margin-left: 25%;
+						}
+					.avatar{
+								margin-top: -2%;
+								margin-left: 10%;
+								border: 2px white solid;
+								border-radius: 50%;
+						}
+					.jule{
+							font-size: 18px;
+							color: hsl(0, 0%, 100%);
+							font-weight: 300;
+							font-family: 'Outfit', sans-serif;
+							margin-top: -6.5%;
+							margin-left: 50.5%;
+							transition: all 0.3s;
+						}
+					.jule:hover{
+									color: hsl(178, 100%, 50%);
+									cursor: pointer;
+									transform: scale(1.05,1.05);
+								}
+			  </style>
+		</head>
+		<body>
+			 <div class="card" role="main">
+						<div class="card-top" role="container of equilibrium image and overlay and icon divs">
+				         <img src="images/image-equilibrium.jpg" alt="image-equilibrium">
+		          <div class="overlay" role="overlay">
+		            <span><img src="images/icon-view.svg" alt="icon-view" class="icon"></span>
+		          </div>
+		        </div>
+							<h1 class="equi">Equilibrium #3429</h1>
+							<h2 class="paragraph"> Our Equilibrium collection promotes balance and calm.</h2>
+							<img class="ethe" src="./images/icon-ethereum.svg" alt="icon-ethereum">
+							<h3 class="et">0.041 ETH</h3>
+						<div class="clockday" role="container of clock and day divs">
+							<img class="clock"src="./images/icon-clock.svg" alt="icon-clock">
+							<h4 class="day">3 days left</h4>
+						</div>
+						<div class="line" role="horizontal line"></div>
+							<img class="avatar" src="./images/image-avatar.png" style="width:40px;" alt="image-avatar">
+							<h5 class="crea">Creation  of</h5>
+							<h6 class="jule">Jules  Wyvern</h6>
+			 </div>
+		</body>
+	</html>
